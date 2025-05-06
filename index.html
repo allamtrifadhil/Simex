@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Neato</title>
+<style>
+  /* Import Google Fonts */
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  header {
+    background: rgba(0,0,0,0.3);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  .logo {
+    font-weight: 600;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    cursor: default;
+  }
+
+  nav {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+  }
+  nav a:hover, nav a:focus {
+    color: #ffd700;
+    outline: none;
+  }
+
+  main {
+    flex-grow: 1;
+    padding: 3rem 2rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero {
+    margin-bottom: 3rem;
+  }
+  .hero h1 {
+    font-size: 2.75rem;
+    font-weight: 700;
+    margin: 0 0 1rem 0;
+    line-height: 1.2;
+  }
+  .hero p {
+    font-size: 1.15rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+    max-width: 480px;
+    line-height: 1.5;
+  }
+  .btn-primary {
+    background: #ffd700;
+    color: #222;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 0.85rem 2rem;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    box-shadow: 0 6px 10px rgba(255, 215, 0, 0.5);
+  }
+  .btn-primary:hover, .btn-primary:focus {
+    background: #ffec80;
+    outline: none;
+  }
+
+  .features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2.5rem;
+    width: 100%;
+  }
+
+  .feature-item {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transition: background 0.3s ease;
+  }
+
+  .feature-item:hover {
+    background: rgba(255, 255, 255, 0.25);
+  }
+
+  .feature-icon {
+    font-size: 2.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .feature-title {
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .feature-desc {
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+
+  footer {
+    background: rgba(0,0,0,0.3);
+    padding: 1.5rem 2rem;
+    text-align: center;
+    font-weight: 300;
+    font-size: 0.9rem;
+    color: #eee;
+  }
+
+  .social-links {
+    margin-top: 0.5rem;
+    display: inline-flex;
+    gap: 1.5rem;
+  }
+  .social-links a {
+    color: #ffd700;
+    font-size: 1.4rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  .social-links a:hover, .social-links a:focus {
+    color: #fff;
+    outline: none;
+  }
+
+  /* Responsive on small mobile screens */
+  @media (max-width: 400px) {
+    .hero h1 {
+      font-size: 2rem;
+    }
+    .hero p {
+      font-size: 1rem;
+    }
+  }
+</style>
+</head>
+<body>
+<header>
+  <!--<div class="logo" tabindex="0">Neato</div>-->
+  <img src="./Img/Logo-removebg-preview.png" style="height: 80px; width: 80px;" alt="">
+  <nav aria-label="Primary navigation">
+    <a href="#home" tabindex="0">Home</a>
+    <a href="#" tabindex="0">Dokumentasi</a>
+  </nav>
+</header>
+<main>
+  <section class="hero" id="home" role="region" aria-label="Introduction">
+    <h1>Welcome to Neato</h1>
+    <p>"Smart Cleaning Solutions for Busy Lives!"</p>
+    <button class="btn-primary" id="actionBtn" aria-label="Get Started Button"><a href="remote.html">Remote Control</a></button>
+  </section>
+
+  <section class="features" id="features" role="region" aria-label="Features">
+    <article class="feature-item" tabindex="0">
+      <div class="feature-icon" aria-hidden="true">🚀</div>
+      <h2 class="feature-title">About</h2>
+      <p class="feature-desc">Robot vacuum sendiri merupakan produk teknologi yang bisa menjadi solusi dalam membersihkan lantai rumah dari debu dan kotoran secara otomatis.</p>
+    </article>
+    <article class="feature-item" tabindex="0">
+      <div class="feature-icon" aria-hidden="true">📱</div>
+      <h2 class="feature-title">Alat Dan Bahan</h2>
+      <p class="feature-desc">Alat dan bahan yang digunakan untuk pembuatan robot vacuum </p>
+      <button class="btn-primary" id="actionBtn" aria-label="Get Started Button" style="height: 50px; width: 100px;"><a href="bahan & alat/alat & bahan.html">Cek</a></button>
+    </article>
+    <article class="feature-item" tabindex="0">
+      <div class="feature-icon" aria-hidden="true">🎨</div>
+      <h2 class="feature-title">Penggunaan</h2>
+      <p class="feature-desc">Cara penjelasan penggunaan website, robot dan remote control</p>
+      <button class="btn-primary" id="actionBtn" aria-label="Get Started Button" style="height: 50px; width: 100px;"><a href="remote.html">Cek</a></button>
+    </article>
+    <article class="feature-item" tabindex="0">
+      <div class="feature-icon" aria-hidden="true">⚙️</div>
+      <h2 class="feature-title">Codingan</h2>
+      <p class="feature-desc">Untuk mendownload codingan dan desain rangkaian</p>
+      <button class="btn-primary" id="actionBtn" aria-label="Get Started Button" style="height: 50px; width: 100px;"><a href="remote.html">Cek</a></button>
+    </article>
+  </section>
+</main>
+<footer id="contact">
+  <div>© 2025 Simex. All rights reserved.</div>
+  <div class="social-links" aria-label="Social media links">
+    <a href="#" aria-label="Facebook" tabindex="0">👍</a>
+    <a href="#" aria-label="Twitter" tabindex="0">🐦</a>
+    <a href="#" aria-label="Instagram" tabindex="0">📸</a>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('actionBtn').addEventListener('click', function () {
+    alert('Thank you for clicking Get Started! More content coming soon.');
+  });
+
+  // Optional: Smooth scroll for navigation links
+  document.querySelectorAll('nav a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href').substring(1);
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+</script>
+</body>
+</html>
+
